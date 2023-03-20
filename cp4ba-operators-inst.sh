@@ -3,16 +3,22 @@
 export CP4BA_AUTO_DEPLOYMENT_TYPE="starter"
 export CP4BA_AUTO_PLATFORM="ROKS"
 export CP4BA_AUTO_ALL_NAMESPACES="No"
-export CP4BA_AUTO_CLUSTER_USER="IAM#...your-id..."
 export CP4BA_AUTO_STORAGE_CLASS_FAST_ROKS="managed-nfs-storage"
 
 export CP4BA_AUTO_NAMESPACE="cp4ba"
+
+# export CP4BA_AUTO_CLUSTER_USER="IAM#...your-id..."
 
 if [ "${CP4BA_AUTO_ENTITLEMENT_KEY}" == "" ]; then
   echo "ERROR: env var CP4BA_AUTO_ENTITLEMENT_KEY not set !"
   exit
 fi
 
+
+if [ "${CP4BA_AUTO_CLUSTER_USER}" == "" ]; then
+  echo "ERROR: env var CP4BA_AUTO_CLUSTER_USER not set !"
+  exit
+fi
 
 oc new-project ${CP4BA_AUTO_NAMESPACE}
 

@@ -3,7 +3,7 @@
 export CP4BA_AUTO_DEPLOYMENT_TYPE="starter"
 export CP4BA_AUTO_PLATFORM="ROKS"
 export CP4BA_AUTO_ALL_NAMESPACES="No"
-export CP4BA_AUTO_CLUSTER_USER="IAM#marco_antonioni@it.ibm.com"
+export CP4BA_AUTO_CLUSTER_USER="IAM#...your-id..."
 export CP4BA_AUTO_STORAGE_CLASS_FAST_ROKS="managed-nfs-storage"
 
 export CP4BA_AUTO_NAMESPACE="cp4ba"
